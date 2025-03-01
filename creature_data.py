@@ -1,0 +1,77 @@
+class CreatureData:
+    # レベルごとのベースパラメータ（進化時にここからスタート）
+    BASE_DATA = {
+        0: {
+            "lifetime": 600,
+            "hp": 8,
+            "speed": 0,
+            "evolution_energy": 50,
+            "evolution_chance": 0.02,
+            "reproduction_energy": 0,
+            "reproduction_chance": 0,
+            "reproduction_cooldown": 0,
+            "energy_per_food": 1,
+            "detection_range": 3,
+            "spawn_chance": 0.1,
+            "max_population": 30,
+            "hunger_threshold": float("inf"),
+            "random_evolution_chance": 0.005,
+            "attack_power": 0,
+        },
+        1: {
+            "lifetime": 300,
+            "hp": 15,
+            "speed": 1.2,
+            "evolution_energy": 60,
+            "evolution_chance": 0.05,
+            "reproduction_energy": 40,
+            "reproduction_chance": 0.05,
+            "reproduction_cooldown": 100,
+            "energy_per_food": 0.5,
+            "detection_range": 3,
+            "spawn_chance": 0,
+            "max_population": float("inf"),
+            "hunger_threshold": 15,
+            "random_evolution_chance": 0.005,
+            "attack_power": 5,
+        },
+        2: {
+            "lifetime": 200,
+            "hp": 20,
+            "speed": 2.0,
+            "evolution_energy": 80,
+            "evolution_chance": 0.1,
+            "reproduction_energy": 40,
+            "reproduction_chance": 0.05,
+            "reproduction_cooldown": 200,
+            "energy_per_food": 0.5,
+            "detection_range": 3,
+            "spawn_chance": 0,
+            "max_population": float("inf"),
+            "hunger_threshold": 10,
+            "random_evolution_chance": 0.002,
+            "attack_power": 8,
+        },
+        3: {
+            "lifetime": 250,
+            "hp": 25,
+            "speed": 1.5,
+            "evolution_energy": float("inf"),
+            "evolution_chance": 0,
+            "reproduction_energy": 50,
+            "reproduction_chance": 0.02,
+            "reproduction_cooldown": 200,
+            "energy_per_food": 0.5,
+            "detection_range": 3,
+            "spawn_chance": 0,
+            "max_population": float("inf"),
+            "hunger_threshold": 10,
+            "random_evolution_chance": 0,
+            "attack_power": 10,
+        }
+    }
+
+    @staticmethod
+    def get(level, key):
+        """レベルでベースパラメータを取得"""
+        return CreatureData.BASE_DATA.get(level, {}).get(key, 0)
