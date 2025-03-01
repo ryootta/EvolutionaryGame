@@ -1,2 +1,2 @@
-ここから遊べるよ！
-https://ryootta.github.io/pyxel/wasm/launcher/?play=EvolutionaryGame.evolutionary_game.game
+#Evolutionary Game
+[ここをクリックして！](https://ryootta.github.io/EvolutionaryGame/evolutionary_game.html)
